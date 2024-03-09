@@ -17,10 +17,10 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.signUpButton.setOnClickListener {
-            it.findNavController().navigate("action_homeFragment_to_nameFragment")
+            it.findNavController().navigate(R.id.action_homeFragment_to_nameFragment)
         }
         binding.termsButton.setOnClickListener {
-            it.findNavController().navigate("action_homeFragment_to_termsFragment")
+            it.findNavController().navigate(R.id.action_homeFragment_to_termsFragment)
         }
         return binding.root
     }

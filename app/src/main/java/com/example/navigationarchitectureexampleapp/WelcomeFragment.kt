@@ -15,10 +15,12 @@ class WelcomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_welcome, container, false)
+        binding.welcomeTextView.text = "Bienvenido " + arguments?.getString("userName")
+        binding.emailTextView.text = arguments?.getString("userName")
         binding.termsButton.setOnClickListener {
-            it.findNavController().navigate("action_welcomeFragment_to_termsFragment")
+            it.findNavController().navigate(R.id.action_welcomeFragment_to_termsFragment)
         }
         return binding.root
     }

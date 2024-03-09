@@ -10,7 +10,7 @@
         tools:context=".WelcomeFragment">
 
         <TextView
-            android:id="@+id/editText"
+            android:id="@+id/welcomeTextView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -18,10 +18,23 @@
             android:text="Welcome"
             android:textAlignment="center"
             android:textSize="40sp"
-            app:layout_constraintBottom_toTopOf="@id/termsButton"
+            app:layout_constraintBottom_toTopOf="@id/emailTextView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toTopOf="@id/termsButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"/>
 
         <Button
             android:id="@+id/termsButton"
@@ -32,7 +45,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
+            app:layout_constraintTop_toBottomOf="@+id/emailTextView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
